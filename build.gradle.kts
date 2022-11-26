@@ -25,7 +25,7 @@ dependencies {
 
 
 application {
-    mainClass.set("com.zamolski.ApplicationKt")
+    mainClass.set("com.zamolski.gaemicronautthymeleaf.ApplicationKt")
 }
 java.sourceCompatibility = JavaVersion.VERSION_17
 
@@ -47,7 +47,7 @@ micronaut {
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("com.zamolski.*")
+        annotations("com.zamolski.gaemicronautthymeleaf.*")
     }
 }
 

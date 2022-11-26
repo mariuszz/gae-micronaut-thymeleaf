@@ -1,4 +1,4 @@
-package com.zamolski
+package com.zamolski.gaemicronautthymeleaf
 
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.annotation.Controller
@@ -13,6 +13,7 @@ class IndexController {
     fun index(): HttpResponse<Map<String, Any>> {
         return HttpResponse.ok(mapOf(
             "title" to "GAE MICRONAUT THYMELEAF",
-            "something" to Something(1, "first")))
+            "something" to Something(1, "first")
+        ))
     }
 }

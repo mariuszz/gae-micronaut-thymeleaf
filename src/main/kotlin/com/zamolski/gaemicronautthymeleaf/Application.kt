@@ -1,4 +1,4 @@
-package com.zamolski
+package com.zamolski.gaemicronautthymeleaf
 
 import io.micronaut.runtime.Micronaut.*
 
