@@ -1,0 +1,17 @@
+= Micronaut app with Thymeleaf on Google App Engine
+
+Minimal https://micronaut.io[Micronaut] app with https://www.thymeleaf.org[Thymeleaf] templates ready for deployment on https://cloud.google.com/appengine[Google App Engine] standard environment.
+
+==== run locally on 8080 port
+ $ ./gradlew run
+
+==== build executable jar
+ $ ./gradlew shadowJar
+
+==== run executable jar
+ $ java -jar build/libs/gae-micronaut-thymeleaf-0.1-all.jar
+
+==== deploy on GAE in DEMO project
+ $ ./gradlew appengineDeploy -DGAE_PROJECT_ID=DEMO
+
+WARNING: The first service in a new application must be the 'default' service. If you run this demo on "fresh" GAE application, please change `gae-micronaut-thymeleaf` to `default` in `app.yaml` file

@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: gaeMicronautThymeleaf
+  router:
+      static-resources:
+        default:
+          paths: "classpath:public"
+netty:
+  default:
+    allocator:
+      max-order: 3
