@@ -6,5 +6,18 @@
 <body>
 Something:<br />
 id:<span th:text="${something.id}"></span>, name:<span th:text="${something.name}"></span> ...
+<table>
+    <caption>Environment variables</caption>
+    <tr>
+        <th>name</th>
+        <th>value</th>
+    </tr>
+    <tr th:each="var: ${env_variables}">
+        <td th:text="${var.key}">key</td>
+        <td th:text="${var.value}">value</td>
+    </tr>
+
+    </tr>
+</table>
 </body>
 </html>

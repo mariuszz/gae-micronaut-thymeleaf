@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.kapt") version "1.7.21"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.7.21"
     id("com.github.johnrengelman.shadow") version "7.1.2"
-    id("io.micronaut.application") version "3.6.3"
+    id("io.micronaut.application") version "3.6.6"
     id("com.google.cloud.tools.appengine") version "2.4.5"
 }
 
@@ -20,7 +20,8 @@ dependencies {
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
     implementation("io.micronaut.views:micronaut-views-thymeleaf")
-    runtimeOnly("ch.qos.logback:logback-classic")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+    implementation("org.slf4j:slf4j-api")
 }
 
 
@@ -56,5 +57,6 @@ appengine {
     deploy {
         projectId = System.getProperty("GAE_PROJECT_ID") ?: "not-set"
         version = "1"
+        promote = false
     }
 }

@@ -1,2 +1,4 @@
 runtime: java17
 service: gae-micronaut-thymeleaf
+inbound_services:
+  - warmup
